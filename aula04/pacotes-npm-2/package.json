@@ -1,0 +1,20 @@
+{
+  "name": "projeto-teste",
+  "version": "1.0.0",
+  "description": "projeto da aula 04",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "curso",
+    "node"
+  ],
+  "author": "tfj",
+  "license": "ISC",
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  },
+  "type": "module"
+}
