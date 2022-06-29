@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "devDcd .ependencies": {
+  "devDependencies": {
     "nodemon": "^2.0.18"
   }
 }
