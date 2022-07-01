@@ -20,12 +20,8 @@ app.post('/', (req, res) => {
 
 // Lista os departamentos
 app.get('/departamentos', (req, res) => {
-    //mock do resultado
-    const departamentos = [
-        { id: "1", nome: "Recursos Humanos", sigla: "RH"},
-        { id: "2", nome: "Tecnologia da Informação", sigla: "TI" },
-        { id: "3", nome: "Departamento Pessoal", sigla: "DP" },
-    ]
+    res.send(mockDepartamentos)
+})
 
 // Lista um departamento especifico
 app.get('/departamentos/:idDepartamento', (req, res) => {
@@ -34,13 +30,9 @@ app.get('/departamentos/:idDepartamento', (req, res) => {
     // a resposta deve ser:
     // {"id": "1","nome": "Recursos Humanos","sigla": "RH"}
     // SE o id nao for encontrado, deve retornar um obejto vazio: {}
-    console.log(req.params.idDepartmentos);
+    console.log(req.params.idDepartamento);
 
     res.send(mockDepartamentos)
 })
-
-    res.send(departamentos)
-})
-
 
 app.listen(3030, () => console.log('Running server'))
