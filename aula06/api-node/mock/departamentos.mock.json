@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "nome": "Recursos Humanos",
+        "sigla": "RH"
+    },
+    {
+        "id": "2",
+        "nome": "Tecnologia da Informação",
+        "sigla": "TI"
+    },
+    {
+        "id": "3",
+        "nome": "Departamento Pessoal",
+        "sigla": "DP"
+    }
+]
