@@ -21,17 +21,17 @@ app.post('/', (req, res) => {
 // Lista todos os departamentos
 app.get('/departamentos', (req, res) => {
     res.send(mockDepartamentos)
+
 })
 
 // Lista um departamento especifico
 app.get('/departamentos/:idDepartamento', (req, res) => {
-    // var info = mockDepartamentos.filter(x => x.id === "1")
-    // console.log(info);  //Você consegue listar os dados que você filtrou no console do servidor
-    // res.send(info)  //Você consegue listar os dados que você filtrou no navegador/request feita
-
     const {idDepartamento} = req.params
-    return mockDepartamentos.filter(i => i.id == id)
 
+    const resultado = mockDepartamentos.filter((depto) => {
+        return depto.id == idDepartamento
+    })
+
+    res.send(resultado)
 })
-
 app.listen(3030, () => console.log('Running server'))
