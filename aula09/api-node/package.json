@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "*",
     "body-parser": "*",
+    "cors": "^2.8.5",
     "mysql": "*",
     "swagger-jsdoc": "*",
     "swagger-ui-express": "*"

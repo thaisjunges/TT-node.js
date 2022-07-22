@@ -1,10 +1,12 @@
 import express from "express"
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import con from './connection.js'
 import swaggerJSDoc from "swagger-jsdoc"
 import swaggerUI from 'swagger-ui-express'
 
 const app = express()
+app.use(cors())
 const options = {
     definition: {
       info: {
@@ -43,7 +45,7 @@ app.use('/swagger-ui', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 *         description: Exibe todos departamentos em um vetor
 */
 app.get('/departamentos', (req, res) => {
-   con.query('SELECT sigla FROM DEPARTAMENTOS ORDER BY nome', (err, result) => {
+   con.query('SELECT * FROM DEPARTAMENTOS ORDER BY nome', (err, result) => {
     res.send(result)
    })
 })
